@@ -1,0 +1,286 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{CJK}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\title{Quantum Chemistry by Levine}
+\author{LuMg}
+\date{Sep 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 4 The Harmonic Oscillator}
+\textbf{4.1}\\
+It is a Taylor series.\\
+$f = \Sigma_0^{\inf}\frac{f^{(n)}(x = a)}{n!}(x-a)^n$\\
+\newline
+
+\textbf{4.2}\\
+given the equation in 4.1\\
+(a) $sinx = x - \frac{x^3}{3!} + \frac{x^5}{5!}$\\
+$sinx = \Sigma_{k=0}^{\inf}(-1)^k\frac{x^{2k+1}}{(2k+1)!}$\\
+(b) $cosx = 1 - \frac{x^2}{2!} + \frac{x^4}{4!}+\dots$\\
+$cosx = \Sigma_{k = 0}^{\inf}(-1)^{2k}\frac{x^{2k}}{(2k)!}$\\
+\newline
+
+\textbf{4.3}\\
+given the equation in 4.1\\
+(a)$e^x = 1 + x + \frac{x^2}{2!} + \dots$\\
+(b)$e^{ix} = 1 + ix - \frac{x^2}{2} + \dots = cos x + sinx$\\
+$e^{-ix} = 1 -ix - \frac{x^2}{2} + \dots = cosx -sinx$\\
+summing up:\\
+$cosx = 1 - \frac{x^2}{2} + \dots$\\
+\newline
+
+\textbf{4.4}\\
+$E = T+ V$\\
+$V = 2\pi^2\nu^2mx^2$\\
+$T = \frac{1}{2}m(\frac{dx}{dt})^2$\\
+$x = Asin(2\pi\nu t+b)$\\
+Combining equations above:\\
+$E = \frac{1}{2}kA^2 = 2\pi^2\nu^2mA^2$\\
+\newline
+
+\textbf{4.5}\\
+(a) The original equation is:\\
+$(1-x^2)y^{,,} - 2xy^,+3y = 0$\\
+Suppose:\\
+$y = \Sigma_{k = 0}^{\inf}c_nx^n$\\
+$c_{n+2} = \frac{n^2 + n - 3}{(n + 1)(n + 2)}c_n$\\
+(b) $c_4 = \frac{3}{12}\frac{-3}{2}c_0 = \frac{-3}{8}c_0$\\
+$c_5 = \frac{9}{20}\frac{-1}{6}c_1 = \frac{-3}{40}c_1$\\
+\newline
+
+\textbf{4.6}\\
+(a) odd\\
+(b) even\\
+(c) odd\\
+(d) neither\\
+(e) even\\
+(f) odd\\
+(g) neither\\
+(h) even\\
+\newline
+
+\textbf{4.7}\\
+Let $f(x), g(x)$ are odd functions, $k(x), l(x)$ are even functions.\\
+$f(x)g(x) = -f(-x)*[-g(-x)] = f(-x)g(-x)$\\
+$k(x)l(x) = k(-x)l(-x)$\\
+$f(x)k(x) = -f(-x)k(-x)$\\
+\newline
+
+\textbf{4.8}\\
+(a) Given $f(x) = f(-x)$\\
+$\frac{df(x)}{dx} = \frac{df(-x)}{dx} = \frac{df(-x)}{d(-x)}$\\
+$\frac{df(x)}{dx} = -\frac{df(-x)}{d(-x)}$\\
+(b)Given $f(x) = -f(-x)$\\
+$\frac{df(x)}{dx} = -\frac{df(-x)}{dx} = -\frac{f(x)}{dx}$
+$\frac{df(-x)}{dx} = \frac{df(x)}{dx}$\\
+(c) Given $f(x) = f(-x)$\\
+$\frac{df(x)}{dx} = -\frac{df(x)}{dx}$\\
+$f^,(0) = 0$\\
+\newline
+
+\textbf{4.9}\\
+(a) in the lowest energy state:\\
+$\Psi_0 = \frac{\alpha}{\pi}^{1/4}e^{-\alpha x^2/2}$\\
+$<T> = \int_{-\inf}^{\inf}\Psi^* T \Psi d\tau$\\
+$=\\frac{\alpha}{\pi}^{1/2}int_{-\inf}^{\inf}e^{-\alpha x^2/2}(-\frac{\hbar^2}{2m}\frac{d^2}{dx^2})e^{-\alpha x^2/2}$\\
+$=h\nu/4$\\
+Given in this energy state $E = \frac{1}{2}h\nu$:\\
+$<V> = \frac{h\nu}{4}$\\
+Elsewise we can also use the integration for $<V>$:\\
+$<V> = \int_{-\inf}^{\inf}\Psi^* T \Psi d\tau$\\
+where: $T = 2\pi^2\nu^2mx^2$\\
+$<V> = \frac{h\nu}{4}$\\
+So:\\
+$<V> = <T>$\\
+\newline
+
+\textbf{4.10}\\
+(a)for $v = 1$\\
+$\Psi = c_1xe^{-\alpha x^2/2}$\\
+Normalize it:\\
+$1 = \int_{-\inf}^{\inf}|\Psi|^2dx$\\
+$c_1 = \sqrt{2}\alpha^{3/4}\pi^{-1/4}$\\
+(b) for $v = 2$\\
+$\Psi = (c_0 + c_2x^2)e^{-\alpha x^2/2}$\\
+Given the recursive equation:\\
+$c_2 = -2\alpha c_0$\\
+For normalization:\\
+$c_0 = 2^{-1/2}\frac{\alpha}{\pi}^{1/4}$\\
+\newline
+
+\textbf{4.11}\\
+Given $v = 3$\\
+$\Psi = (c_1x+c_3x^3)e^{-\alpha x^2/2}$\\
+From the recursion:\\
+$c_3 = -2\alpha c_1 / 3$\\
+For normalization:\\
+$1 = \int_{-\inf}^{\inf}|\Psi|^2d\tau$\\
+$|c_1| = \sqrt{3}\alpha^{3/4}\pi^{-1/4}$\\
+\newline
+
+\textbf{4.12}\\
+for $v=4$\\
+$\Psi = e^{-\alpha x^2/2}(c_0 + c_2x^2 + c_4x^4)$\\
+using recursive equation:\\
+$c_2 = -4\alpha c_0$\\
+$c_4 = \frac{4}{3}\alpha^2 c_0$\\
+For normalization:\\
+$1 = \int_{-\inf}^{\inf}|\Psi|^2d\tau$\\
+$\Psi_4 = c_0e^{-\alpha x^2/2}(1 - 4\alpha x^2 + \frac{4}{3}\alpha^2x^4)$\\
+\newline
+
+\textbf{4.13}\\
+for $v = 1$\\
+$\Psi = c_1xe^{-\alpha x^2/2}$\\
+the max prob point is:\\
+$\frac{d|\Psi|^2}{dx} = 0$\\
+where $x = 0$ is the min point\\
+$x = \frac{1}{\sqrt{\alpha}}$ and $x = -\frac{1}{\sqrt{\alpha}}$ are the max point\\
+\newline
+
+\textbf{4.14}\\
+for $v = 5$\\
+it is an odd function, and has 6 max/min points\\
+\newline
+
+\textbf{4.15}\\
+for quantum number $v$.
+the function:\\
+$\Psi = e^{-\alpha x^2 / 2}(c_0+c_2x^2+c_4x^4+\dots)$ for even $v$\\
+$\Psi = e^{-\alpha x^2 / 2}(c_1x+c_3x^3+c_5x^5+\dots)$ for odd $v$\\
+$<x> = \int_{-\inf}^{\inf}\Psi^*x\Psi d\tau$\\
+\newline
+
+\textbf{4.16}\\
+(a) T.\\
+odd $v$ means odd function\\
+(b) T.\\
+(c) F.\\
+it can multiply by $-1$ and the function still holds.\\
+(d) T.\\
+$E = (v+\frac{1}{2})h\nu$\\
+(e) T.\\
+there is only one $v$ for each energy level.\\
+\newline
+
+\textbf{4.17}\\
+for PIB, $n=n_0$ there are $n_0$ max/min points\\
+when $n = 0$ we have $E = 0$\\
+for harmonic oscillator, $v = 0,1,2\dots$ has $v+1$ max/min points\\
+when $v = 0$, we have $E = \frac{1}{2}h\nu$\\
+\newline
+
+\textbf{4.18}\\
+(a)the classic equation:\\
+$x = Asin(2\pi\nu t + b)$\\
+so:\\
+$t = \frac{1}{2\pi\nu}(sin^{-1}(\frac{x}{A}) - b)$\\
+(b) $dt = f(x)dx$\\
+at the turning points, the speed of classic object is $0$\\
+So it means the object will stay static there\\
+the time to stay there (prob density) is $\inf$\\
+\newline
+
+\textbf{4.19}\\
+for $x < 0$ it is PIB condition\\
+$E = \frac{n^2h^2}{8ml^2}$\\
+for $x >= 0$ it is harmonic oscillator condition:\\
+$E = (\frac{1}{2} + v)h\nu$\\
+for continuity $E(0) = 0$\\
+So the harmonic oscillator has to be a odd function with $v = 2k + 1$\\
+So overall:\\
+$E = (2k+1 + \frac{1}{2})h\nu$\\
+\newline
+
+\textbf{4.20}\\
+(a) the Schrodinger equation becomes:\\
+$-\frac{\hbar^2}{2m}\nabla^2\Psi + \frac{1}{2}(k_x^2+k_y^2+k_z^2)\Psi = E\Psi$\\
+if $\Psi = f(x)g(y)h(z)$\\
+then separate the variables:\\
+$-\frac{\hbar^2}{2m}\frac{1}{f}\frac{d^2f}{dx^2} + \frac{1}{2}k_x^2 = E$\\
+formulate it to be:\\
+$-\frac{\hbar^2}{2m}\frac{d^2f}{dx^2} + \frac{1}{2}k_x^2f = Ef$\\
+which is the same as one-dimension harmonic oscillator\\
+$E_x = (\frac{1}{2} + v_x)h\nu_x$\\
+overall:\\
+$E = (\frac{1}{2} + v_x)h\nu_x + (\frac{1}{2} + v_y)h\nu_y + (\frac{1}{2} + v_z)h\nu_z$\\
+(b) when $k_x = k_y = k_z$\\
+it means $\nu_x = \nu_y = \nu_z = \nu$\\
+$E = (\frac{3}{2} + v_x + v_y + v_z)h\nu$\\
+the lowest energy is $v_x = v_y = v_z = 0$ not degenerate.\\
+$E = \frac{3}{2}h\nu$\\
+So the lowest degeneracy is $1,0,0$ or $0,1,0$ or $0,0,1$\\
+\newline
+
+\textbf{4.21}\\
+(a) $n = 0,1,2,3$ can approve\\
+(b) $zH_{n}(z) = nH_{n - 1}(z)+ \frac{1}{2}H_{n+1}(z)$\\
+(c) can approve for $v = 0$\\
+$\Psi_0 = \frac{\alpha}{\pi}^{1/4}e^{-\alpha x^2/2}$\\
+\newline
+
+\textbf{4.23}
+(a)the function:\\
+$\Psi = e^{-\alpha x^2 / 2}(c_0+c_2x^2+c_4x^4+\dots)$ for even $v$\\
+$\Psi = e^{-\alpha x^2 / 2}(c_1x+c_3x^3+c_5x^5+\dots)$ for odd $v$\\
+(b) $c_{n+2} = \frac{\alpha+2\alpha n - 2mE\hbar^{-2}}{(n+1)(n+2)}c_n$\\
+\newline
+
+\textbf{4.24}\\
+(a) from classic equation:\\
+$\nu = \frac{1}{2\pi}\sqrt{\frac{k}{m}}$\\
+So here:\\
+$k = 4\pi^2\nu^2\mu$
+where $\mu = \frac{m_1m_2}{m_1+m_2} = \frac{1}{N}\frac{1*35}{1+35}$\\
+$k=481N/m$\\
+(b) zero point vibration energy:\\
+$E = \frac{1}{2}h\nu = 2.87*10^{-20}J$\\
+(c)$\nu = \frac{1}{2\pi}\sqrt{\frac{k}{m}}$\\
+So $\frac{\nu_2}{\nu_1} = \frac{\sqrt{m_1}}{\sqrt{m_2}}$\\
+where $m_2 = \frac{1}{N}\frac{2*35}{2+35}$\\
+$\nu_2 = \sqrt{\frac{m_1}{m_2}}\nu_1 = 6.20*10^{13}s^{-1}$\\
+\newline
+
+\textbf{4.25}\\
+(a) the emission from $v_1$ to $v_2$:\\
+$v_{light} = (v_2-v_1)v_e - v_ex_e(v_2^2 - v_1^2+v_2 - v_1)$\\
+in this problem:\\
+from $v_1 = 0$ to $v_2 = 1$:\\
+$v_{light}= v_e - 2v_ex_e = 2889.98cm^{-1} * c$\\
+from $v_1 = 0$ to $v_2 = 2$:\\
+$v_{light} = 2v_e - 6v_ex_e = 5667.98cm^{-1} * c$\\
+$v_e = 8.69*10^{13}s^{-1}$\\
+$v_ex_e = 1.559*10^{12}s^{-1}$\\
+(b) from $n = 0$ to $n = 3$\\
+$v_{light} = 3v_e - 12v_ex_e$\\
+$\frac{1}{\lambda} = \frac{v_{light}}{c} = 8346.00 cm^{-1}$\\
+\newline
+
+\textbf{4.26}\\
+(a) $\Delta E = \frac{hc}{\lambda} = 6.626*10^{34}Js*3*10^{10}cm/s*1359cm^{-1} = 2.7*10^{-20}J$\\
+this is nondegenerate, using Boltzmann distribution equation:\\
+$\frac{N_1}{N_0} = e^{-\Delta E / kT}$\\
+where $k$ is the Boltzmann constant\\
+when $T = 298K$:\\
+$\frac{N_1}{N_0} = 0.0014$\\
+when $T = 473K$:\\
+$\frac{N_1}{N_0} = 0.016$\\
+(b) similarly for ICl:\\
+$\Delta E = \frac{hc}{\lambda} = 7.57*10^{-21}J$\\
+where $\lambda = 381cm^{-1}$\\
+then $\frac{N_1}{N_0} = 0.16$ at $T = 298K$\\
+$\frac{N_1}{N_0} = 0.31$ at $T = 473K$\\
+\newline
+
+\textbf{4.27}\\
+$E_{vib} = (\frac{1}{2}+v)h\nu  - (v+\frac{1}{2})^2hv_ex_e$\\
+given $v2 = v1+1$\\
+$\frac{\Delta E}{h} = v_e - 2v_ex_e(v_1 + 1)$\\
+\newline
+
+\end{document}

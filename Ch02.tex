@@ -1,0 +1,255 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{CJK}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\title{Quantum Chemistry by Levine}
+\author{LuMg}
+\date{Sep 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 2 The Particle in a Box}
+\textbf{2.1}\\
+(a)$s^2+s-6 = 0$\\
+$y = c_1e^{-3x}+c_2e^{2x}$\\
+(b) Given boundary condition:\\
+$c_1+c_2=0$\\
+$-3c_1+2c_2 = 1$\\
+$c_1 = 0.2, c2=-0.2$\\
+$y = 0.2e^{-3x}-0.2e^{2x}$\\
+\newline
+
+\textbf{2.2}\\
+$(s-(2+i))*(s - (2-i)) = 0$\\
+$s^2 - 4s + 5 = 0$\\
+So the original equation is:\\
+$\frac{d^2y}{dx^2}-4\frac{dy}{dx}+5 = 0$\\
+\newline
+
+\textbf{2.3}\\
+(a) $(s-a)^2=0$\\
+The original equation is:\\
+$y^{,,} - 2ay^{,} + a^2y = 0$\\
+The other root $xe^{ax}$:\\
+$y^{,} = e^{ax}+axe^{ax}$\\
+$y^{,,} = ae^{ax}+ae^{ax}+a^2xe^{ax}$\\
+The original equation is:\\
+$(2a+a^2x)e^{ax} - 2a*(1+ax)e^{ax}+ a^2xe^{ax} = 0$\\
+holds\\
+(b)$y^{,,} - 2y^{,}+y = 0$\\
+$s = 1$\\
+So according to (a) the equation is:\\
+$y = c_1e^x+c_2xe^x$\\
+\newline
+
+\textbf{2.4}\\
+$x = x(t)$\\
+(a)$m\frac{d^2x}{dt^2} = c$\\
+Linear.\\
+(b)$m\frac{d^2x}{dt^2} = -kx$\\
+Linear.\\
+(c)$m\frac{d^2x}{dt^2} = ax^3$\\
+Nonlinear.\\
+(d)$m\frac{d^2x}{dt^2} = bsinax$\\
+Nonlinear.\\
+(e)$m\frac{d^2x}{dt^2} = a-kx$\\
+Linear.\\
+\newline
+
+\textbf{2.5}\\
+(a) False.
+The energy level starts with $n=1$\\
+(b) False.\\
+Between two energy level is not evenly separated.\\
+$E = \frac{n^2\hbar^2}{8ml^2}$\\
+(c) True.\\
+(d) False.\\
+Not all time sensitive term is a phase term.\\
+(e) True.\\
+$n=1$ to $n=2$ needs least energy.\\
+\newline
+
+\textbf{2.6}\\
+the state function is:\\
+$\Psi = \sqrt{\frac{2}{l}}*sin(\frac{n\pi x}{l})$\\
+So the wave form at different n is:\\
+(a) max at $\frac{l}{2}$, min at $0$ and $l$\\
+(b) max at $\frac{l}{4}$ or $\frac{3l}{4}$, min at $0$ or $\frac{l}{2}$ or $l$\\
+(c) max at $\frac{l}{6}$ or $\frac{l}{2}$ or $\frac{5l}{6}$, min at $0$ or $\frac{l}{3}$ or $\frac{2l}{3}$ or $l$\\
+\newline
+
+\textbf{2.7}\\
+(a) this is for all n value:\\
+$\Psi = \sqrt{\frac{2}{l}}*sin(\frac{n\pi x}{l})$\\
+$Prob = \int_0^{\frac{l}{4}}|\Psi|^2dx = \frac{1}{4} - \frac{n\pi}{2}sin(\frac{n\pi}{2})$\\
+(b) maximize the above prob, when $n=3$\\
+(c) $\frac{1}{4}$\\
+(d) falls back to classic law\\
+\newline
+
+\textbf{2.8}\\
+(a) this infinity is small enough:\\
+$\Psi = \sqrt{\frac{2}{l}}*sin(\frac{n\pi x}{l})$\\
+$Prob = |\Psi|^2dx = \frac{2}{l}sin^2(\frac{\pi x}{l})dx$\\
+where:\\
+$l = 2\r{A}$ and $x = 0.6\r{A}$ and $dx = 0.001\r{A}$\\
+So:\\
+$Prob = 6.65*10^{-4}$\\
+in one million exps:\\
+$n = 655$ times\\
+(b) $Prob = |\Psi|^2dx = \frac{2}{l}sin^2(\frac{\pi x}{l})dx$\\
+when $x = 0.7\r{A}$ and $x = 1.0\r{A}$\\
+$\frac{Prob(0.7)}{Prob(1.0)} = \frac{126}{n}$\\
+$n = 159$
+\newline
+
+\textbf{2.9}\\
+(a)corresponding: 4 nodes and 5 nodes\\
+(b) $\Psi = \sqrt{\frac{2}{l}}*sin(\frac{4\pi x}{l})$\\
+$\Psi^2 = \frac{2}{l}sin^2(\frac{4\pi x}{l})$\\
+$\frac{d\Psi^2}{dx} = \frac{4}{l}\frac{4\pi}{l}sin(\frac{4\pi x}{l})cos(\frac{4\pi x}{l})$\\
+\newline
+
+\textbf{2.10}\\
+(a) Given PIB:\\
+$E = \frac{n^2h^2}{8ml^2}$\\
+So the diff for $n=1$ and $n=2$ is:\\
+$E_{diff} = \frac{(2^2-1^2)*h^2}{8ml^2} = \frac{3*(6.626*10^{-34})^2}{8*9.109*10^{-31}*(10^{-10})^2} = 1.81*10^{-17}J$\\
+(b) $E_{diff} = h\nu = h\frac{c}{\lambda}$\\
+$\lambda = 110\r{A}$\\
+(c) ultraviolet\\
+\newline
+
+\textbf{2.11}\\
+it is a macro object, so we expect $n$ is very large.\\
+When $n$ is large, the prob seems evenly distributed in the box.\\
+$E = \frac{n^2h^2}{8ml^2}$\\
+And in macro world:\\
+$E = \frac{1}{2}mV^2$\\
+So: $n = 3*10^{26}$\\
+\newline
+
+\textbf{2.12}\\
+$E = h\nu = \frac{(5^2 - 2^2)h^2}{8ml^2}$\\
+$l = 1.78nm$\\
+\newline
+
+\textbf{2.13}\\
+$E = h\nu = h\frac{c}{\lambda} = \frac{(n^2 - 1)h^2}{8ml^2}$\\
+$n = 4$\\
+\newline
+
+\textbf{2.14}\\
+$\frac{E_1}{E_2} = \frac{\nu_1}{\nu_2} = \frac{2^2 - 1}{3^2 - 2^2}$\\
+$\nu_2 = \frac{5}{3}&\nu_1 = 1*10^{13}s^{-1}$\\
+\newline
+
+\textbf{2.15}\\
+$E = h\nu = \frac{n_a^2 - n_b^2}{8ml^2}h^2$\\
+$n_a^2 - n_b^2 = 5$
+So it is from $n = 2$ to $n = 3$\\
+\newline
+
+\textbf{2.16}\\
+We need to find two sets of $n_a$ and $n_b$, where:\\
+$n_a^2 - n_b^2 = k$ and $n_c^2 - n_d^2 = k$\\
+an example is $k = 15$ for $(1,4)$ and $(7, 8)$\\
+\newline
+
+\textbf{2.17}\\
+There are 4 pi electrons, taking $n=1$ and $n=2$ level.\\
+So the excitement is from $n = 2$ to $n = 3$\\
+$E = h\nu = \frac{(3^2-2^2)h^2}{8ml^2}$\\
+$\nu = 320nm$\\
+\newline
+
+\textbf{2.18}\\
+the boundary condition changes\\
+inside the box:\\
+$-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}\Psi^2 = E\Psi$\\
+$\Psi = Acos(\frac{\sqrt{2mE}}{\hbar}x) + Bsin(\frac{\sqrt{2mE}}{\hbar}x)$\\
+boundar is:\\
+$\Psi(x = -\frac{l}{2}) = 0$\\
+and:\\
+$\Psi(x = \frac{l}{2}) = 0$\\
+if $A \neq 0$ then $B = 0$ and $\frac{\sqrt{2mE}}{\hbar}\frac{l}{2} = (k+\frac{1}{2})\pi$\\
+then $E = \frac{(2k+1)^2h^2}{8ml^2}$\\
+similarly:\\
+if $B \neq 0$ then $A = 0$ and $\frac{\sqrt{2mE}}{\hbar}\frac{l}{2} = k\pi$\\
+then $E = \frac{(2k)^2h^2}{8ml^2}$\\
+combine them together:\\
+$E = \frac{n^2h^2}{8ml^2}$\\
+\newline
+
+\textbf{2.20}\\
+adding time term:
+$E = e^{-iEt/\hbar}(Acos(\frac{\sqrt{2mE}}{\hbar}x) + Bsin(\frac{\sqrt{2mE}}{\hbar})x)$\\
+\newline
+
+\textbf{2.21}\\
+(a) this is purely from boundary condition:\\
+$\Psi_1(0) = \Psi_2(0)$\\
+and $\Psi^,_1(0) = \Psi^,_2(0)$\\
+(b) another boundary condition at $x = l$\\
+\newline
+
+\textbf{2.22}\\
+$tan(\frac{\sqrt{2mE}}{\hbar}l) = -2\sqrt{\frac{E}{V_0}} = 0$\\
+So:\\
+$\frac{\sqrt{2mE}}{\hbar}l = n\pi$\\
+it is the same as:\\
+$E = \frac{n^2h^2}{8ml^2}$\\
+\newline
+
+\textbf{2.23}\\
+$b = \sqrt{2mV_0}\frac{l}{\hbar} = 1.26\pi$\\
+then $N - 1 < \frac{b}{\pi} <= N$\\
+$N = 2$\\
+\newline
+
+\textbf{2.27}\\
+$\epsilon = \frac{E}{V_0} = 0.15$\\
+then $2(\epsilon - 1)sin(b\sqrt{\epsilon})-2\sqrt{\epsilon - \epsilon^2}cos(b\sqrt{\epsilon}) = 0$\\
+$b = 6.07$\\
+also $b = \sqrt{2mV_0}\frac{l}{\hbar}$\\
+So: $l = 0.265nm$\\
+\newline
+
+\textbf{2.28}\\
+$N = 1,2,3$\\
+from $N - 1 < \frac{b}{\pi} <= N$\\
+$2 < \sqrt{2mV_0}\frac{l}{\hbar\pi} <= 3$\\
+So:\\
+$l <= 5.20 \r{A}$\\
+\newline
+
+\textbf{2.29}\\
+$N-1 < \sqrt{2mV_0}\frac{l}{\hbar\pi} <= N$\\
+(a) increase with $V_0$\\
+(b) increase with $l$\\
+\newline
+
+\textbf{2.32}\\
+(a)F.\\
+$n = 1,2,3..$ to make $\Psi \neq 0$\\
+(b)F.\\
+the wave function is continuous \\
+(c) T.\\
+for free one dimensional particle, since $\Psi_{\inf} is \inf$ so the derivitive is not continuous\\
+(d)F.\\
+Harmonical oscillation with odd n is 0 at center.\\
+(e) T.\\
+the prob densitiy func is an odd function.\\
+(f) F.\\
+the prob densitiy func is an even function.\\
+(g) T.\\
+needs more and more energy.\\
+(h) F.\\
+for macro object the prob density is constant, but not for micro particles.\\
+(i) T.\\
+classical object can have 0 energy. But micro object has $n>0$.\\
+\newline
+\end{document}

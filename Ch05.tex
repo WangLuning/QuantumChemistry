@@ -1,0 +1,264 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{CJK}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\title{Quantum Chemistry by Levine}
+\author{LuMg}
+\date{Sep 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 5 Angular Momentum}
+\textbf{5.1}\\
+(a) no.\\
+(b) yes\\
+(c) yes\\
+(d) yes\\
+(e) yes\\
+for all well-behaved functions\\
+\newline
+
+\textbf{5.2}\\
+(a)$[\hat{A},\hat{B}] = \hat{A}\hat{B} - \hat{B}\hat{A} = -[\hat{B},\hat{A}]$\\
+(b)$[\hat{A},\hat{A}^n] = \hat{A}^{n+1} - \hat{A}^{n+1} = 0$\\
+(c)$[k\hat{A},\hat{B}] = k\hat{A}\hat{B} - \hat{B}k\hat{A} = k[\hat{A},\hat{B}]$\\
+(d)$[\hat{A},\hat{B}+\hat{C}] = \hat{A}(\hat{B}+\hat{C}) - (\hat{B}+\hat{C})\hat{A} = [\hat{A},\hat{B}]+ [\hat{A},\hat{C}]$\\
+(e)$[\hat{A},\hat{B}{C}] = \hat{A}\hat{B}\hat{C} - \hat{B}\hat{C}\hat{A}$\\
+\newline
+
+\textbf{5.3}\\
+$[\hat{x},\hat{p_x}^3] = p_x[\hat{x},\hat{p_x}^2]+[\hat{x},\hat{p_x}]\hat{p_x}^2$\\
+$=-i\hbar\frac{\partial}{\partial x}(2\hbar^2\frac{\partial}{\partial x})+i\hbar(-\hbar^2\frac{\partial^2}{\partial x^2})$\\
+\newline
+
+\textbf{5.4}\\
+for a harmonic oscillator:\\
+$<x> = 0$\\
+for energy level $n = 0$, it has energy $E = \frac{hv}{2}$\\
+from which $<T> = \frac{hv}{4}$\\
+$<V> = \frac{1}{2}kx^2 = \frac{hv}{4}$\\
+So $<x^2> = \frac{hv}{2k} = \frac{h}{8\pi^2\nu m}$\\
+$(\triangle x)^2 = <x^2> - <x>^2 = \frac{h}{8\pi^2\nu m}$\\
+So:\\
+$\triangle x = \sqrt{\frac{h}{8\pi^2\nu m}}$\\
+similarly:\\
+$<p_x> = 0$\\
+Given $<T> = \frac{p^2_x}{2m} = \frac{hv}{4}$\\
+$<p^2_x> = \frac{hvm}{2}$\\
+$\triangle p_x = \sqrt{<p^2_x> - <p_x>^2} = \sqrt{\frac{hvm}{2}}$\\
+So:\\
+$\triangle x \triangle p_x = \frac{h}{4\pi} = \frac{\hbar}{2}$\\
+\newline
+
+\textbf{5.5}\\
+Given the non-stationary state:
+$\Psi = \sqrt{105/l^7}x^2(l-x)$\\
+We need to calculate 4 values: $<x>, <x^2>, <p_x>, <p^2_x>$\\
+$<x> = \int_{-\inf}{\inf}\Psi^*x\Psi d\tau = \frac{5l}{8}$\\
+$<x^2> = \int_{-\inf}^{\inf}\Psi^*x^2\Psi d\tau= \frac{5l^2}{12}$\\
+$<p_x> = \int_{-\inf}^{\inf}\Psi^*(-i\hbar\frac{\partial}{\partial x})\Psi d\tau = 0$\\
+$<p^2_x> = \int_{-\inf}^{\inf}\Psi^*(-i\hbar\frac{\partial}{\partial x})^2\Psi d\tau = \frac{14\hbar^2}{l^2}$\\
+$\triangle x = \sqrt{<x^2> - <x>^2} = \sqrt{\frac{5}{192}}l$\\
+$\triangle p_x = \sqrt{<p^2_x> - <p_x>^2} = \sqrt{14}\frac{\hbar}{l}$\\
+So:\\
+$\triangle x \triangle p_x = \sqrt{\frac{5}{192}}l \sqrt{14}\frac{\hbar}{l} > \frac{\hbar}{2}$\\
+\newline
+
+\textbf{5.6}\\
+Given $\Psi$ is the eigenfunction, the only measurement value can be eigenvalue $a$\\
+So it is expected there is no deviation.\\
+$\triangle A = <A^2> - <A>^2$\\
+where:\\
+$<A^2> = \int_{-\inf}^{\inf}\Psi^*A^2\Psi = a^2$\\
+$<A>^2 = a^2$\\
+So:
+$\triangle A = \sqrt{<A^2> - <A>^2} = 0$\\
+\newline
+
+\textbf{5.7}\\
+$(\triangle A)^2 = \int_{-\inf}^{\inf}\Psi(A - <A>)^2\Psi d\tau$\\
+$=\int_{-\inf}^{\inf}\Psi A^2 \Psi d\tau - 2<A>\int_{-\inf}^{\inf}\Psi A \Psi d\tau + <A>^2$
+$=<A^2> - <A>^2$\\
+\newline
+
+\textbf{5.8}\\
+All the combinations $HH, HT, TH, TT$\\
+So $<w> = 1$\\
+where $w$ takes value $2,1,0$\\
+$w^2$ can take $4,1,0$ at different possibilities\\
+$<w^2> = 4*\frac{1}{4} + 1*\frac{1}{2} + 0*\frac{1}{4} = 1.5$\\
+So:\\
+$\sigma w = \sqrt{<w^2> - <w>^2} = \sqrt{0.5}$\\
+\newline
+
+\textbf{5.9}\\
+(a)vector\\
+(b)vector\\
+(c)scalar\\
+(d)scalar\\
+(e)vector\\
+(f)scalar\\
+\newline
+
+\textbf{5.10}\\
+$A = (3,-2,6), B = (-1,4,4)$\\
+$|A| = 7, |B| = \sqrt{33}$\\
+$A+B = (-2,3,10), A-B = (4,-6,2)$\\
+$AB = 13$\\
+$A*B = (-32,-18,10)$\\
+$cos\theta = \frac{AB}{|A||B|} = \frac{13}{7\sqrt{33}}$\\
+\newline
+
+\textbf{5.11}\\
+two diagonal lines are $(1,1,1),(-1,1,-1)$\\
+$cos\theta = \frac{-1}{3}$\\
+\newline
+
+\textbf{5.13}\\
+$grad\, f = \overrightarrow{i}(4x-5yz)+\overrightarrow{j}(-5xz)+\overrightarrow{-5xy+2z}$\\
+$\nabla f = 4+0+2 = 6$\\
+\newline
+
+\textbf{5.14}\\
+(a) $div\cdot grad\, g(x,y,z) = div \dot (\overrightarrow{i}(\frac{\partial}{\partial x})+\overrightarrow{j}(\frac{\partial}{\partial y})+\overrightarrow{k}(\frac{\partial}{\partial z}))$\\
+$\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}$\\
+(b)$div \cdot \overrightarrow{r} = (\overrightarrow{i}\frac{\partial}{\partial x} + \overrightarrow{j}\frac{\partial}{\partial y} + \overrightarrow{k}\frac{\partial}{\partial z})(\overrightarrow{i}x + \overrightarrow{j}y + \overrightarrow{k}z) = 1+1+1 = 3$\\
+\newline
+
+\textbf{5.15}\\
+(a)$|B| = \sqrt{13}$\\
+(b) with each axis:\\
+$cos\alpha = \frac{(3,-2,0,1)(1,0,0,0)}{\sqrt{13}} = \frac{3}{\sqrt{13}}$\\
+$cos\alpha = \frac{(3,-2,0,1)(0,1,0,0)}{\sqrt{13}} = \frac{-2}{\sqrt{13}}$\\
+$cos\alpha = \frac{(3,-2,0,1)(0,0,1,0)}{\sqrt{13}} = 0$\\
+$cos\alpha = \frac{(3,-2,0,1)(0,0,0,1)}{\sqrt{13}} = \frac{1}{\sqrt{13}}$\\
+\newline
+
+\textbf{5.16}\\
+(a) no\\
+(b) yes\\
+(c) yes\\
+(d) yes\\
+$[\^{L}_x^2,\^{L}^2] = \^{L}_x[\^{L}_x,\^{L}^2] + [\^{L}_x,\^{L}^2]\^{L}_x = 0$\\
+\newline
+
+\textbf{5.18}\\
+$[\^{L}_x^2,\^{L}_y] = \^{L}_x[\^{L}_x,\^{L}_y]+ [\^{L}_x,\^{L}_y]\^{L}_x$\\
+$=i\hbar(\^{L}_x\^{L}_z+\^{L}_z\^{L}_x)$\\
+\newline
+
+\textbf{5.19}\\
+coordinate conversion\\
+$(x,y,z) -> (r,\theta,\phi)$\\
+$r = \sqrt{x^2+y^2+z^2}$\\
+$\theta = cos^{-1}(\frac{z}{r})$\\
+$\phi = tan^{-1}(\frac{y}{x})$\\
+(a) given$(1,2,0)$\\
+$r = \sqrt{5}$\\
+$\theta = \frac{\pi}{2}$\\
+$\phi = tan^{-1}2$\\
+(b) given $(-1, 0, 3)$\\
+$r = \sqrt{10}$\\
+$\theta = cos^{-1}(\frac{3}{\sqrt{10}})$\\
+$\phi = tan^{-1}0 = \pi$\\
+(c) given $(3,1,-2)$\\
+$r = \sqrt{14}$\\
+$\theta = cos^{-1}(\frac{-2}{\sqrt{14}})$\\
+$\phi = tan^{-1}(\frac{1}{3})$\\
+(d) given $(-1,-1,-1)$\\
+$r = \sqrt{3}$\\
+$\theta = cos^{-1}(\frac{-1}{\sqrt{3}})$\\
+$\phi = tan^{-1}(1) = \frac{5}{4}\pi$\\
+\newline
+
+\textbf{5.20}\\
+Coordinate conversion:\\
+$x = rsin\theta cos\phi$\\
+$y = rsin\theta sin \phi$\\
+$z = rcos\theta$\\
+(a) given $r = 1, \theta = \pi/2, \phi = \pi$\\
+$x = -1, y = 0, z = 0$\\
+(b) given $r = 2, \theta = \pi/4, \phi = 0$\\
+$x = \sqrt{2}, y = 0, \sqrt{2}$\\
+\newline
+
+\textbf{5.21}\\
+(a) sphere\\
+(b) cone\\
+(c) plane perpendicular to xy plane\\
+\newline
+
+\textbf{5.22}\\
+the volume is:\\
+$V = \int_0^{2\pi}\int_0^{\pi}\int_0^r r^2sin\theta drd\theta d\phi = \frac{4}{3}\pi r^3$\\
+\newline
+
+\textbf{5.23}\\
+the shape of $\overrightarrow L$ is a cone\\
+So the eigenvalue of $c = \overrightarrow L_z = m\hbar$\\
+the eigenvalue of $b = \overrightarrow L^2 = l(l+1)\hbar^2$\\
+$cos\theta = \frac{c}{\sqrt{b}} = \frac{m}{\sqrt{l(l+1)}}$\\
+given $l = 2$\\
+$m = -2,-1,0,1,2$\\
+then $cos \theta = \frac{-2}{\sqrt{6}}, \frac{-1}{\sqrt{6}}, 0, \frac{1}{\sqrt{6}}, \frac{2}{\sqrt{6}}$\\
+\newline
+
+\textbf{5.24}\\
+Given $cos\theta = \frac{c}{\sqrt{b}} = \frac{m}{\sqrt{l(l+1)}}$\\
+when $m = -l, -l+1, \dots, l-1, l$\\
+when $m = l$, $cos^2\theta = \frac{l}{l+1}$\\
+when $l -> \inf$ then $cos\theta -> 1, \theta = 0$\\
+\newline
+
+\textbf{5.28}\\
+$\^{L}^2Y^0_2 = 2*(2+1)Y^0_2$\\
+\newline
+
+\textbf{5.29}\\
+$\^{L}_z^3Y^m_l = (m\hbar)^3Y^m_l$\\
+\newline
+
+\textbf{5.30}\\
+$\^{L}_x^2+\^{L}_y^2 = \^{L}^2 - \^{L}_z^2$\\
+So the eigenvalue is $l(l+1)\hbar^2 - m^2\hbar^2$\\
+\newline
+
+\textbf{5.31}\\
+(a) given $l = 2$, $m = -2,-1,0,1,2$\\
+the measured value $m\hbar = -2\hbar, -\hbar, 0, \hbar, 2\hbar$\\
+(b) given $l = 3$\\
+the measured value $m\hbar = -3\hbar,-2\hbar, -\hbar, 0, \hbar, 2\hbar, 3\hbar$\\
+\newline
+
+\textbf{5.32}\\
+similar to $\^{L}_z$, $[\^{L}^2,\^L_y] = 0$\\
+the eigenvalue is also $-\hbar, 0, \hbar$\\
+\newline
+
+\textbf{5.33}\\
+the other parameters are not important since it is time term\\
+Given $Y^1_2$\\
+the measurement of $\^{L}^2 = l(l+1)\hbar = 6\hbar$\\
+the measurement of $\^{L}_z = m\hbar = \hbar$\\
+\newline
+
+\textbf{5.35}\\
+$\^{L}_{-}Y_1^1 = Y_1^0$\\
+$\^{L}^2_{-}Y_1^1 = Y_1^{-1}$\\
+$\^{L}^3_{-}Y_1^1 = 0$\\
+\newline
+
+\textbf{5.37}\\
+(a) true\\
+(b) false\\
+(c) true\\
+(d) true\\
+(e) true\\
+(f) false\\
+it is possible to find an eigenfunction, but not a set of eigenfunction\\
+\newline
+
+\end{document}

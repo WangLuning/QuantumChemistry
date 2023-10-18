@@ -1,0 +1,277 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{CJK}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\title{Quantum Chemistry by Levine}
+\author{LuMg}
+\date{Sep 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 6 The Hydrogen Atom}
+\textbf{6.1}\\
+(a) True\\
+(b) False\\
+\newline
+
+\textbf{6.2}\\
+(a)needs $V(r)$ to be irrelated to $\theta, \phi$\\
+(b)the conversion of the equation is step by step:\\
+$-\frac{\hbar^2}{2m}\triangledown^2\Psi + V(r)\Psi = E\Psi$\\
+convert to a spherical coordinate:\\
+$-\frac{\hbar^2}{2m}(\frac{\partial^2\Psi}{\partial r^2}+\frac{2}{r}\frac{\partial \Psi}{\partial r})+\frac{1}{2mr^2}\^{L}^2\Psi+V(r)\Psi = E\Psi$\\
+then given $\^{L}^2$ has eigenvalue $l(l+1)\hbar^2$\\
+$\Psi$ should satisfy both $R$ related function and $\^{L}^2$'s eigenfunction $Y^m_l$\\
+so suppose:\\
+$\Psi = R(r)Y^m_l$\\
+the above equation is:\\
+$-\frac{\hbar^2}{2m}(R^{,,}+\frac{2}{r}R^,)+\frac{l(l+1)}{2mr^2}R+V(r)R = ER$\\
+given in this problem $l = 0$ and $V = 0$ when $r<b$\\
+$-\frac{\hbar^2}{2m}(R^{,,}+\frac{2}{r}R^,) = ER$\\
+substitute $R = g(r)/r$\\
+$g^{,,}+\frac{2mE}{\hbar^2}g = 0$\\
+$g(r) = rR = Acos(\frac{\sqrt{2mE}}{\hbar}r) + Bsin(\frac{\sqrt{2mE}}{\hbar}r)$\\
+One is from this substitution, $g(0) = 0R = 0$\\
+So $A = 0$\\
+Another is from the boundary condition:\\
+$r = b, g = 0$\\
+Namely:\\
+$\frac{\sqrt{2mE}}{\hbar}b = n\pi$\\
+$E = \frac{n^2h^2}{8mb^2}$\\
+$R(r) = g(r)/r = \frac{B}{r}sin(\frac{\sqrt{2mE}}{\hbar}r)$\\
+\newline
+
+\textbf{6.3}\\
+(a) if idential force in all direction\\
+$V = \frac{1}{2}k(x^2+y^2+z^2) = \frac{1}{2}kr^2$\\
+irrelevant to $\theta$ and $\phi$\\
+So the wave function is:\\
+$\Psi = R(r)Y^m_l(\theta, \phi)$\\
+(c) using the same function as in \textbf{6.2}\\
+$-\frac{\hbar^2}{2m}(R^{,,}+\frac{2}{r}R^,)+\frac{l(l+1)}{2mr^2}R+V(r)R = ER$\\
+when $V(r) = \frac{1}{2}kr^2$\\
+(d) verifiying from a harmonic oscillator point of view:\\
+$\Psi = (\alpha/\pi)^{3/4}e^{-\alpha r^2/2}$\\
+there is no $\theta$ or $\phi$\\
+So in Hamilton operator, it means $\Psi = R(r)Y^m_l(\theta,\phi)$\\
+where $Y^m_l(\theta,\phi) = constant$, namely $l = 0$\\
+\newline
+
+\textbf{6.5}\\
+(a) False\\
+(b) True\\
+\newline
+
+\textbf{6.6}\\
+two particles are not related to each other\\
+$E = \frac{h^2}{8l^2}(\frac{n_1^2}{m_1}+\frac{n_2^2}{m_2})$\\
+Given the six lowest state:\\
+$(1,1), (1,2),(2,1),(2,2),(2,3),(3,2)$\\
+\newline
+
+\textbf{6.7}\\
+(a)True\\
+$\frac{m_1m_2}{m_1+m_2} < m_1 < m_2$\\
+(b) True\\
+$V(r)$ is part of the internal wave function potential energy\\
+\newline
+
+\textbf{6.8}\\
+(a) True\\
+Since $J = 4$, it has $2*4+1=9$ different m value\\
+(b) False\\
+Distance $E_{div} = 2(J+1)B$\\
+(c) True\\
+Spacing between teo $E_{div}$ is $2B$\\
+(d) True\\
+the fact is bond length is almost the same, but $E_{rot}$ is different since $\mu$ is different\\
+(e) True\\
+It is the same atom\\
+\newline
+
+\textbf{6.9}\\
+(a)Given the energy difference between $J = 0$ and $J = 1$:\\
+$E_{div} = \frac{J(J+1)\hbar^2}{2\mu d^2} - 0= \frac{2\hbar^2}{2\mu d^2}$\\
+where $\mu = \frac{m_1m_2}{m_1+m_2} = \frac{12*16}{(12+16)*6.02*10^{23}}$\\
+So:\\
+$d = 1.13\mathring{A}$\\
+(b) the first absorption is from $J = 0$ and $J = 1$\\
+the next two is from $J = 1$ to $J = 2$ and $J = 2$ to $J = 3$\\
+where the first is $2(J+1)B = 2B$\\
+the next two is $2(J+1)B = 4B$ and $2(J+1)B = 6B$\\
+so the frequency is twice and three times of the original lowest absorption:\\
+$\nu_2 = 2*115271MHz$\\
+$\nu_3 = 3*115271MHz$\\
+(c) the bond length is almost the same\\
+the difference is in reduced mass $\mu$\\
+$hv_{new} = \frac{1*2\hbar^2}{2\mu_{new}d^2}$\\
+\newline
+
+\textbf{6.10}\\
+Given the emission energy:\\
+$E_{div} = hv = 2(J+1)B = 2*3B = h*126.4GHz$\\
+So $E_{div} = hv_2 = 2(J+1)B = 2*(5+1)B = 12B = h*v_2$\\
+So:\\
+$v_2 = 2*v = 252.8GHz$\\
+\newline
+
+\textbf{6.11}\\
+$E_{div} = \frac{8*(8+1)\hbar^2}{2\mu d^2} - \frac{7(7+1)\hbar^2}{2\mu d^2} = h\nu$\\
+where $\nu = 104189.7MHz$\\
+So: $d = 2.36\mathring{A}$\\
+\newline
+
+\textbf{6.12}\\
+the difference between two emission is $2B = h\nu = h * (921.84 - 806.65)GHz$\\
+the initial emission is $115.19GHz$\\
+\newline
+
+\textbf{6.13}\\
+adding the correction to the rigid rotator:\\
+$\Delta E = 2(J+1)Bh - hD[(J+1)^2(J+2)^2 - J^2(J+1)^2]$\\
+$=2(J+1)Bh - 4hD(J+1)^3$\\
+So emission $\nu_{0-1} = 2B - 4D$\\
+emission $\nu_{4-5} = 10B - 500D$\\
+$D = 0.183MHz$\\
+\newline
+
+\textbf{6.14}\\
+Given $I = m_1\rho_1^2+m_2\rho_2^2$\\
+and $m_1\rho_1 = m_2\rho_2$ and $\mu = \frac{m_1m_2}{m_1+m_2}$\\
+$I = \mu (\rho_1+\rho_2)^2 = \mu d^2$\\
+\newline
+
+\textbf{6.15}\\
+the Coulon force is $F = \frac{e^2}{4\pi \epsilon_0 r^2}$\\
+the gravity force is $G = \frac{Gm_pm_e}{r^2}$\\
+which is negligible\\
+\newline
+
+\textbf{6.17}\\
+(a) the energy of H atom:\\
+$\Delta E = -13.598eV * (\frac{1}{6^2} - \frac{1}{3^2}) = h\nu = h\frac{c}{\lambda}$\\
+So $\lambda = 1094.12nm$\\
+(b) for $He^{+}$ it has the same energy equation $E = -13.598eV*\frac{Z^2}{n^2}$\\
+where $Z^2 = 4$\\
+So $\nu_{He} = 4\nu_{H}$\\
+$\lambda = \frac{\lambda_{H}}{4} = 273.5nm$\\
+\newline
+
+\textbf{6.18}\\
+Given the emission wavelengths:\\
+$\lambda = \frac{c}{\nu} = \frac{ch}{\Delta E} = \frac{ch}{\frac{-13.6eV}{n_1^2} - \frac{-13.6eV}{n_2^2}}$\\
+So try different values of $n_1$ and $n_2$\\
+They have values $n = 2,3,7,8$\\
+\newline
+
+\textbf{6.23}\\
+Given ground state $\Psi_{100} = \frac{1}{\sqrt{\pi}}\frac{Z}{a}^{3/2}e^{-Zr/a}$\\
+So $<r> = \int |\Psi|^2rd\tau$\\
+In spherical coordinate:\\
+$<r>=\int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}|\Psi|^2rr^2sin\theta dr d\theta d\phi = \frac{3a}{2Z}$\\
+\newline
+
+\textbf{6.24}\\
+for $2p_0$:\\
+$\Psi_{210} = \frac{1}{\sqrt{\pi}}\frac{Z}{2a}^{5/2}re^{-Zr/2a}cos\theta$\\
+So $<r> = \int |\Psi|^2r d\tau$\\
+in spherical coordinate:\\
+$<r>=\int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}|\Psi|^2rr^2sin\theta dr d\theta d\phi = \frac{5a}{Z}$\\
+\newline
+
+\textbf{6.25}\\
+for $2p1$:\\
+$\Psi_{211} = \frac{1}{8\sqrt{\pi}}\frac{Z}{a}^{5/2}re^{-Zr/2a}sin\theta e^{i\phi}$\\
+$<r>=\int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}|\Psi|^2rr^2sin\theta dr d\theta d\phi = \frac{30a^2}{Z^2}$\\
+\newline
+
+\textbf{6.26}\\
+Given the original:\\
+$<r> = \int_0^{2\pi}\int_0^{\pi}\int_0^{\infty}|\Psi|^2rr^2sin\theta dr d\theta d\phi = \int_0^{2\pi} r^3|R_{nl}|^2dr\int_0^{\pi}\int_0^{\infty}|Y^m_l|^2sin\theta d\theta d\phi = \int_0^{2\pi} r^3|R_{nl}|^2dr$\\
+\newline
+
+\textbf{6.27}\\
+$R_{2s} = b_0(1-Zr/2a)e^{-Zr/2a}$\\
+using normalization:\\
+$\int_0^{\infty}R_{2s}^2r^2dr = 1$\\
+$b_0 = \frac{Z}{a}^{3/2}\frac{1}{\sqrt{2}}$\\
+$R_{2p} = re^{-Zr/2a}b_0$\\
+using the same normalization method:\\
+$R_{2p} = \frac{1}{\sqrt{24}}\frac{Z}{a}^{5/2}re^{-Zr/2a}$\\
+\newline
+
+\textbf{6.28}\\
+for s states, for example: $\Psi_{100} = \frac{1}{\sqrt{\pi}}\frac{Z}{a}^{3/2}e^{-Zr/a}$\\
+\newline
+
+\textbf{6.35}\\
+$E= <H> = \int \Psi^* H\Psi d\tau = \int \Psi^*(T+V)\Psi d\tau = <T>+ <V>$\\
+\newline
+
+\textbf{6.36}\\
+$V = -\frac{e^2}{4\pi \epsilon r}$\\
+$E = -\frac{e^2}{8 \pi \epsilon r}$\\
+So $T = E - V = \frac{e^2}{8\pi \epsilon r}$\\
+So $T/V = 1/2$\\
+\newline
+
+\textbf{6.38}\\
+$p_z$ is $p_0$ depicted by $L_z$\\
+$p_x$ is depicted by $L_x$\\
+$p_y$ is depicted by $L_y$\\
+\newline
+
+\textbf{6.39}\\
+Given $Af = af$ and $Ag = bg$\\
+if $A(c_1f+c_2g = c_1af+c_2bg = a(c_1f+c_2\frac{b}{a}g)$\\
+So we need $a=b$\\
+\newline
+
+\textbf{6.40}\\
+(a)for $2p_z$, it is the eigenfunction of $\^{H},\^{L}^2,\^{L}_z$\\
+(b)for $2p_x$,it is the eigenfunction of $\^{H},\^{L}^2$\\
+(c)for $2p_1$,it is the eigenfunction of $\^{H},\^{L}^2,\^{L}_z$\\
+\newline
+
+\textbf{6.42}\\
+$p_x, p_y, p_z$ orthogonal to each other\\
+$\int_0^{2\pi} cos\phi sin \phi = 0$\\
+$\int_0^{2\pi}cos\phi = 0$\\
+$\int_0^{2\pi}sin\phi = 0$\\
+\newline
+
+\textbf{6.52}\\
+(a) dx, from 0 to l\\
+(b) dx, from $-\infty$ to $\infty$\\
+(c) dxdydz, from $-\infty$ to $\infty$\\
+(d) $r^2sin\theta drd\theta d\phi$, from $0$ to $\infty$, from 0 to $\pi$, from 0 to $2\pi$\\
+\newline
+
+\textbf{6.54}\\
+(a) harmonic oscillator, since $E = (n+\frac{1}{2})h\nu$\\
+(b) rigid rotator, $\Delta E = 2(J+1)Bh$\\
+(c) H atom, $E = -13.6eV*\frac{Z^2}{n^2}$\\
+\newline
+
+\textbf{6.55}\\
+(a) infinite number of bound state energy: particle in a box where $V = \infty$ outside\\
+(b) finite number of bound state energy: particle in a well where $V = a$ outside\\
+(c) particle in a box, $E = \frac{n^2h^2}{8ml^2}$\\
+\newline
+
+\textbf{6.56}\\
+(a) false\\
+(b) true\\
+(c) false, electron is $-e$\\
+(d) true\\
+(e) false, it is not on a circle orbit only\\
+(f) false, $s$ state is not 0 at center\\
+(g) false\\
+(h) true\\
+(i) false\\
+\newline
+
+\end{document}

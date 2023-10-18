@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{CJK}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\title{Quantum Chemistry by Levine}
+\author{LuMg}
+\date{Oct 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Chapter 9 Perturbation Theory}
+\textbf{9.1}\\
+$\^{H} = \^{H}^0+\^{H}^,$\\
+$\^{H}^0 = \frac{-\hbar^2}{2m}\frac{d^2}{dx^2}$\\
+$\^{H} = C$\\
+$E^{1} = <\phi|C|\phi> = C$\\
+\newline
+
+\textbf{9.2}\\
+(a)$E^{2} = \Sigma_{m!=n}|H^,_{mn}|^2/(E_n^0-E_m^0)$\\
+where $H^,_{mn} = <\phi_m|H^,|\phi_n> = C<\phi_m|\phi_n> = 0$\\
+So $E^{2} = 0$\\
+there is no second order correction. One order correction is already precise.\\
+\newline
+(b) $\Psi^{1} = \Sigma_{m!=n}\frac{<\Psi_m^{0}|H^,|\Psi_n^0>}{E_n^0 - E_m^0}\Psi_m^0$\\
+where $<\Psi_m^{0}|H^,|\Psi_n^0> = 0$\\
+So $\Psi^{(1)} = 0$\\
+\newline
+(c)$\^{H}\Psi = E\Psi$\\
+\newline
+
+\textbf{9.3}\\
+$E^{(1)} = <\Psi_n|H^,|\Psi> = \sqrt{\frac{4\alpha^3}{\pi}}\int_{-\infty}^{\infty}x^2e^{-\alpha x}(cx^3+dx^4)dx = \frac{15d\hbar^2}{16\pi^2v^2m}$\\
+\newline
+
+\textbf{9.4}\\
+$E^{(1)} = <\Psi_n^{0}|H^,|\Psi_n^{0}> = \frac{2}{l}\int_{l/4}^{3l/4}V_0sin^2(\frac{n\pi x}{l})dx$\\
+where $V_0 = \frac{\hbar^2}{ml^2}$\\
+\newline
+for $n = 1$:\\
+$E_1^{0} = \frac{h^2}{8ml^2}$\\
+$E_1^{(1)} = 0.818\frac{\hbar^2}{ml^2}$\\
+So correction $E = E_1^{(0)}+E_1^{(1)} = 5.75\frac{\hbar^2}{ml^2}$\\
+for $n = 2$:\\
+$E_2^{(0)} = \frac{4h^2}{8ml^2}$\\
+$E_2^{(1)} = \frac{\hbar^2}{2ml^2}$\\
+So correction $E = E_2^{(0)}+E_2^{(1)} = 20.23\frac{\hbar^2}{ml^2}$\\
+\newline
+
+\textbf{9.5}\\
+it is closest to the waveform\\
+\newline
+
+\textbf{9.6}\\
+$\Psi_n^{(1)} = \Sigma_{m!=n}a_m\Psi_m^{(0)} = \sqrt{\frac{2}{l}}\Sigma_{m!=n}a_m sin(\frac{m\pi x}{l})$\\
+in the previous question, we know that:\\
+$a_m = <\Psi_m^{(0)}|H^,|\Psi_n^{(0)}>=\frac{2}{l}\int_{l/4}^{3l/4}V_0sin(\frac{n\pi x}{l})sin(\frac{m\pi x}{l})$\\
+\newline
+
+\textbf{9.7}\\
+(a)$<\Psi_m^{(0)}|H^,|\Psi_n^{(0)}>$ for $n = 1$ and $m$ is even\\
+So $\Psi_n^{(0)}$ is an even function and $\Psi_m^{(0)}$ is odd function\\
+the integral is 0\\
+\newline
+
+\end{document}
